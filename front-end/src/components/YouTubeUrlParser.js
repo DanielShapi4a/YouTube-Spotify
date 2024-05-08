@@ -7,13 +7,14 @@ const YouTubeUrlParser = ({ onTitleReceived }) => {
 
   const handleParse = async () => {
     try {
-      const data = { url: url };
-      console.log("trying to fetch:", data.url);
+      console.log("trying to fetch:", url);
       console.log("api:", process.env.REACT_APP_API_URL);
-
-      const response = await axios.get(`${process.env.REACT_APP_API_URL}/youtube`, data); 
+  
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/youtube`, {
+        params: { url: url } 
+      }); 
       const { data: videoDetails } = response; 
-      console.log(data);
+      console.log(videoDetails);
       if (videoDetails && videoDetails.title) {
         setVideoDetails(videoDetails);
         onTitleReceived(videoDetails.title);
@@ -25,6 +26,7 @@ const YouTubeUrlParser = ({ onTitleReceived }) => {
       alert('Failed to fetch video details. Please try again.');
     }
   };
+  
   
 
   return (

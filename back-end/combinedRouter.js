@@ -11,7 +11,8 @@ require('dotenv').config();
 // YouTube route
 router.get('/youtube', async (req, res) => {
     try {
-        const { url } = req.body; 
+        console.log("getting url");
+        const { url } = req.query; 
         const videoId = extractVideoId(url);
         if (!videoId) {
             return res.status(400).json({ error: 'Invalid YouTube URL' });
@@ -29,6 +30,7 @@ router.get('/youtube', async (req, res) => {
         return res.status(500).json({ error: 'Internal server error' });
     }
 });
+
 
 // Spotify route
 router.post('/spotify', async (req, res) => {
@@ -84,8 +86,6 @@ const fetchBearerToken = async () => {
         throw error; 
     }
 };
-
-module.exports = router;
 
 const extractVideoId = (url) => {
   const regex = /[?&]v=([^&#]+)/;
