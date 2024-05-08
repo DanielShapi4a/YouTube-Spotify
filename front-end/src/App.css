@@ -1,0 +1,58 @@
+.light-mode {
+  transition: 0.5s;
+  background-color: #ffffff; 
+  color: #212529; 
+}
+
+.light-mode .form-control {
+  background-color: #f8f9fa; 
+  color: #212529; 
+}
+
+.light-mode .btn {
+  color: #212529; 
+}
+
+.light-mode .btn-outline-secondary {
+  border-color: #212529; 
+}
+
+.light-mode .btn-outline-secondary:hover {
+  background-color: #212529; 
+  color: #ffffff; 
+}
+
+.light-mode .list-group-item {
+  background-color: #f8f9fa; 
+  color: #212529;
+}
+
+
+.dark-mode {
+  transition: 0.5s;
+  background-color: #212529; 
+  color: #ffffff; 
+}
+
+.dark-mode .form-control {
+  background-color: #ffffff; 
+  color: #ffffff; 
+}
+
+.dark-mode .btn {
+  color: #ffffff; 
+}
+
+.dark-mode .btn-outline-secondary {
+  border-color: #ffffff; 
+}
+
+.dark-mode .btn-outline-secondary:hover {
+  background-color: #ffffff; 
+  color: #212529; 
+}
+
+.dark-mode .list-group-item {
+  background-color: #343a40;
+  color: #ffffff; 
+}
