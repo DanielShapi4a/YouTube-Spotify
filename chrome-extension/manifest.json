@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube-Spotify-Extension",
+  "version": "1.0",
+  "description": "Find corresponding Spotify songs for YouTube videos and download YouTube videos as MP3 or MP4. 🎵📹",
+  "permissions": [
+    "activeTab",
+    "http://localhost:5000/"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "build/index.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  }
+}
