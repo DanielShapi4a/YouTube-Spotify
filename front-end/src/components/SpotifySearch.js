@@ -14,7 +14,7 @@ const SpotifySearch = ({ initialSearchInput }) => {
     try {
       const data = { query: searchInput };
       console.log("trying to fetch spotify123:", data.query);
-      const response = await axios.post(`${process.env.REACT_APP_API_URL}/spotify`, data);
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}spotify`, data);
       console.log(response);
       const { data: tracks } = response;
       if (tracks && tracks.length > 0) {
