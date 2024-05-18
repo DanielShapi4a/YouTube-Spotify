@@ -5,11 +5,8 @@
   "description": "Find corresponding Spotify songs for YouTube videos and download YouTube videos as MP3 or MP4. 🎵📹",
   "permissions": [
     "activeTab",
-    "https://youtube-spotify-back-end.onrender.com/"
+    "https://youtube-spotify-back-end.onrender.com/*"
   ],
-  "background": {
-    "service_worker": "background.js"
-  },
   "action": {
     "default_popup": "index.html",
     "default_icon": {
